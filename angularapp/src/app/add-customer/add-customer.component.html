@@ -1,0 +1,24 @@
+<h4>New Customer Details</h4>
+<div>
+    <label>First name</label>
+    <input [formControl]="form.controls.firstName" />
+</div>
+<div>
+    <label>Last name</label>
+    <input [formControl]="form.controls.lastName" />
+</div>
+<div>
+    <label>Address</label>
+    <input [formControl]="form.controls.address" />
+</div>
+<div>
+    <label>Mobile</label>
+    <input [formControl]="form.controls.mobile" />
+</div>
+
+<div>
+    <label>Email</label>
+    <input [formControl]="form.controls.email" />
+</div>
+
+<button (click)="submit()">Submit</button>

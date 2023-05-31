@@ -1,0 +1,23 @@
+<div *ngIf="loading">
+    LOADING CUSTOMERS
+</div>
+<div *ngIf="!loading">
+    <div *ngIf="customers.length === 0">
+        No Customers
+    </div>
+    <div *ngIf="customers.length!==0">
+        <h4>Customer List</h4>
+        <div *ngFor="let customer of customers">
+
+            {{customer.fullName}}
+            <button (click)="viewCustomer(customer.id)">View</button>
+            <hr />
+        </div>
+    </div>
+</div>
+
+<app-customer-details *ngIf="selectedCustomer" [customer]="selectedCustomer"></app-customer-details>
+
+
+
+<app-add-customer (customerAdded)="loadCustomers()"></app-add-customer>
