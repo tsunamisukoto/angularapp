@@ -8,12 +8,19 @@ describe('CustomerDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomerDetailsComponent ]
+      declarations: [CustomerDetailsComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(CustomerDetailsComponent);
     component = fixture.componentInstance;
+    component.customer = {
+      firstName: 'a',
+      lastName: 'b',
+      email: '@',
+      address: 'add',
+      mobile: '123'
+    };
     fixture.detectChanges();
   });
 
