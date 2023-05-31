@@ -1,4 +1,7 @@
 <h4>New Customer Details</h4>
+<label *ngIf="form.invalid">
+    Form is currently invalid
+</label>
 <div>
     <label>First name</label>
     <input [formControl]="form.controls.firstName" />

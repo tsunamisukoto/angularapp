@@ -11,7 +11,7 @@ export class AddCustomerComponent {
   form = new FormGroup({
     firstName: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
     lastName: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
-    email: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
+    email: new FormControl<string>('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
     address: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
     mobile: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] })
   })
